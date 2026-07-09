@@ -1,0 +1,208 @@
+/* Google Font */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f5f5f7;
+    min-height:200vh;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    position:fixed;
+    top:20px;
+    left:0;
+    display:flex;
+    justify-content:center;
+    z-index:1000;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    width:92%;
+    max-width:1400px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 35px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,0.65);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.5);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    cursor:pointer;
+}
+
+.logo i{
+
+    font-size:24px;
+    color:#0071E3;
+}
+
+.logo span{
+
+    font-size:28px;
+    font-weight:700;
+    color:#111;
+    letter-spacing:-1px;
+}
+
+/* ================= LINKS ================= */
+
+.nav-links{
+
+    list-style:none;
+
+    display:flex;
+    gap:38px;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+
+    color:#0071E3;
+}
+
+/* ================= BUTTONS ================= */
+
+.nav-buttons{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.login-btn{
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-weight:600;
+
+    padding:11px 22px;
+
+    border-radius:40px;
+
+    transition:.3s;
+}
+
+.login-btn:hover{
+
+    background:#ececec;
+}
+
+.join-btn{
+
+    text-decoration:none;
+
+    background:#111;
+
+    color:#fff;
+
+    padding:12px 26px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.join-btn:hover{
+
+    background:#0071E3;
+
+    transform:translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+.nav-links{
+
+    gap:22px;
+}
+
+}
+
+@media(max-width:950px){
+
+.nav-links{
+
+    display:none;
+}
+
+.navbar{
+
+    padding:14px 22px;
+}
+
+.logo span{
+
+    font-size:24px;
+}
+
+}
+
+@media(max-width:600px){
+
+.navbar{
+
+    width:95%;
+}
+
+.join-btn{
+
+    padding:10px 18px;
+}
+
+.login-btn{
+
+    padding:10px 16px;
+}
+
+}

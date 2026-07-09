@@ -1,0 +1,450 @@
+```css
+/* ===============================
+   GOOGLE FONT
+==================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===============================
+   GLOBAL
+==================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#f3f4f6,#e5e7eb);
+
+    color:#111;
+
+    padding:40px 20px;
+
+}
+
+/* ===============================
+   CONTAINER
+==================================*/
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ===============================
+   REGISTER CARD
+==================================*/
+
+.register-card{
+
+    width:100%;
+    max-width:480px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+/* ===============================
+   LOGO
+==================================*/
+
+.logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+}
+
+.logo i{
+
+    font-size:32px;
+
+    color:#111;
+
+}
+
+.logo h1{
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+/* ===============================
+   TITLE
+==================================*/
+
+.register-card h2{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:8px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:35px;
+
+}
+
+/* ===============================
+   INPUTS
+==================================*/
+
+.input-box{
+
+    margin-bottom:22px;
+
+}
+
+.input-box label{
+
+    display:block;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+.input-field{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    background:#f7f7f7;
+
+    border:1px solid transparent;
+
+    transition:.3s;
+
+}
+
+.input-field:focus-within{
+
+    background:#fff;
+
+    border-color:#111;
+
+    box-shadow:0 0 0 4px rgba(17,17,17,.08);
+
+}
+
+.input-field i{
+
+    color:#777;
+
+}
+
+.input-field input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-size:16px;
+
+}
+
+.toggle-password{
+
+    cursor:pointer;
+
+}
+
+/* ===============================
+   TERMS
+==================================*/
+
+.terms{
+
+    margin:10px 0 30px;
+
+    font-size:15px;
+
+}
+
+.terms label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#555;
+
+}
+
+.terms a{
+
+    color:#111;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.terms a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===============================
+   BUTTON
+==================================*/
+
+.register-btn{
+
+    width:100%;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.register-btn:hover{
+
+    background:#2b2b2b;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===============================
+   DIVIDER
+==================================*/
+
+.divider{
+
+    margin:35px 0;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:#ddd;
+
+}
+
+.divider span{
+
+    position:relative;
+
+    background:#fff;
+
+    padding:0 18px;
+
+    color:#888;
+
+}
+
+/* ===============================
+   SOCIAL BUTTONS
+==================================*/
+
+.google-btn,
+.apple-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#f5f5f5;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.google-btn i,
+.apple-btn i{
+
+    margin-right:10px;
+
+}
+
+.google-btn:hover,
+.apple-btn:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+/* ===============================
+   LOGIN LINK
+==================================*/
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#666;
+
+}
+
+.login-link a{
+
+    color:#111;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===============================
+   RESPONSIVE
+==================================*/
+
+@media(max-width:600px){
+
+.register-card{
+
+    padding:30px 22px;
+
+}
+
+.logo h1{
+
+    font-size:28px;
+
+}
+
+.register-card h2{
+
+    font-size:30px;
+
+}
+
+.subtitle{
+
+    font-size:15px;
+
+}
+
+.input-field{
+
+    padding:14px 16px;
+
+}
+
+.terms label{
+
+    align-items:flex-start;
+
+    line-height:1.6;
+
+}
+
+}
+```

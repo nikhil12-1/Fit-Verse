@@ -1,0 +1,56 @@
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-dumbbell"></i>
+            <span>FitVerse</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a routerLink="/home">Home</a></li>
+
+            <li><a routerLink="/exercises">Exercises</a></li>
+
+            <li><a routerLink="/bmi">BMI</a></li>
+
+            <li><a routerLink="/plans">Plans</a></li>
+
+            <li><a routerLink="/gallery">Gallery</a></li>
+
+            <li><a routerLink="/about">About</a></li>
+
+            <li><a routerLink="/contact">Contact</a></li>
+
+        </ul>
+
+        <div class="nav-buttons" *ngIf="isLoggedIn">
+
+            <a routerLink="/login" class="login-btn">
+                Login
+            </a>
+
+            <a routerLink="/join" class="join-btn">
+                Join Now
+            </a>
+
+        </div>
+
+
+
+         <div class="nav-buttons" *ngIf="!isLoggedIn">
+
+            <a routerLink="/login" class="login-btn">
+               Accounts
+            </a>
+
+            <a routerLink="/join" class="join-btn">
+               Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
