@@ -5,6 +5,7 @@ import { UserRoutingModule } from './user-routing-module';
 import { Dashboard } from './dashboard/dashboard';
 import { Profile } from './profile/profile';
 
+
 @NgModule({
   declarations: [Dashboard, Profile],
   imports: [CommonModule, UserRoutingModule],

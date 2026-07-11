@@ -1,0 +1,55 @@
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <h2>FITVERSE</h2>
+
+        <p>Gym Dashboard</p>
+
+    </div>
+
+    <nav>
+
+        <a routerLink="/user/dashboard" routerLinkActive="active">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+
+        <a routerLink="/user/profile">
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </a>
+
+        <a routerLink="/user/workout">
+            <i class="fa-solid fa-dumbbell"></i>
+            Workout
+        </a>
+
+        <a routerLink="/user/diet">
+            <i class="fa-solid fa-utensils"></i>
+            Diet
+        </a>
+
+        <a routerLink="/user/bmi">
+            <i class="fa-solid fa-heart-pulse"></i>
+            BMI
+        </a>
+
+        <a routerLink="/user/gallery">
+            <i class="fa-solid fa-image"></i>
+            Gallery
+        </a>
+
+        <a routerLink="/user/settings">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </a>
+
+    </nav>
+
+    <button class="logout" (click)="onLogout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </button>
+
+</aside>

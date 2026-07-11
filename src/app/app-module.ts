@@ -17,6 +17,9 @@ import { Exercises } from './appComponent/exercises/exercises';
 import { PublicLayout } from './layouts/public-layout/public-layout';
 import { AuthLayout } from './layouts/auth-layout/auth-layout';
 import { UserLayout } from './layouts/user-layout/user-layout';
+import { UserHeader } from './layouts/user-header/user-header';
+import { UserFooter } from './layouts/user-footer/user-footer';
+import { UserSidebar } from './layouts/user-sidebar/user-sidebar';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { UserLayout } from './layouts/user-layout/user-layout';
     PublicLayout,
     AuthLayout,
     UserLayout,
+    UserHeader,
+    UserFooter,
+    UserSidebar,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
