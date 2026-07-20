@@ -11,7 +11,7 @@
 
             <li><a routerLink="/home">Home</a></li>
 
-            <li><a routerLink="/exercises">Exercises</a></li>
+            <li><a routerLink="/exercise">Exercises</a></li>
 
             <li><a routerLink="/bmi">BMI</a></li>
 
@@ -25,28 +25,14 @@
 
         </ul>
 
-        <div class="nav-buttons" *ngIf="isLoggedIn">
+        <div class="nav-buttons" >
 
             <a routerLink="/login" class="login-btn">
                 Login
             </a>
 
             <a routerLink="/join" class="join-btn">
-                Join Now
-            </a>
-
-        </div>
-
-
-
-         <div class="nav-buttons" *ngIf="!isLoggedIn">
-
-            <a routerLink="/login" class="login-btn">
-               Accounts
-            </a>
-
-            <a routerLink="/join" class="join-btn">
-               Logout
+                Join No
             </a>
 
         </div>

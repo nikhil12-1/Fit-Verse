@@ -61,6 +61,25 @@ import { UserLayout } from './layouts/user-layout/user-layout';
       },
 
       {
+        path: 'login',
+        component: Login
+      },
+      {
+        path: 'register',
+        component: Register
+      },
+
+      {
+        path: 'join',
+        component: JoinNow
+      },
+      
+      {
+        path: 'contact',
+        component: Contact
+      },
+
+      {
         path: 'contact',
         component: Contact
       }
