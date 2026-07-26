@@ -1,124 +1,55 @@
 <section class="contact-section">
-
-
     <div class="contact-heading">
-
         <h1>Contact Us</h1>
-
         <p>
             Have questions? Connect with us and begin your fitness transformation.
         </p>
-
     </div>
-
-
-
     <div class="contact-container">
-
-
         <!-- Contact Information -->
-
         <div class="contact-box">
-
-
             <h2>Get In Touch</h2>
-
-
             <div class="contact-item">
-
                 <i class="fa-solid fa-location-dot"></i>
-
                 <div>
                     <h3>Address</h3>
                     <p>Punjab, India</p>
                 </div>
-
             </div>
-
-
-
             <div class="contact-item">
-
                 <i class="fa-solid fa-phone"></i>
-
                 <div>
                     <h3>Phone</h3>
                     <p>+91 98765 43210</p>
                 </div>
-
             </div>
-
-
-
-
             <div class="contact-item">
-
                 <i class="fa-solid fa-envelope"></i>
-
                 <div>
                     <h3>Email</h3>
                     <p>fitzone@gmail.com</p>
                 </div>
-
             </div>
-
-
-
-
             <div class="contact-item">
-
                 <i class="fa-solid fa-clock"></i>
-
                 <div>
                     <h3>Timing</h3>
                     <p>6 AM - 10 PM</p>
                 </div>
-
             </div>
-
-
         </div>
-
-
-
-
         <!-- Contact Form -->
-
         <div class="contact-box">
-
-
             <h2>Send Message</h2>
-
-
-            <form>
-
-
-                <input type="text" placeholder="Enter Your Name">
-
-
-                <input type="email" placeholder="Enter Your Email">
-
-
-                <input type="text" placeholder="Subject">
-
-
-                <textarea placeholder="Write your message"></textarea>
-
-
-
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                <input type="text" placeholder="Enter Your Name" name="name" ngModel>
+                <input type="email" placeholder="Enter Your Email" name="email" ngMode>
+                <input type="text" placeholder="Subject" name="subject" ngMode>
+                <textarea placeholder="Write your message" name="message" ngMode></textarea>
                 <button>
                     Send Message
                 </button>
-
-
             </form>
-
-
         </div>
-
-
-
     </div>
-
-
 </section>
