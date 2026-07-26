@@ -1,28 +1,26 @@
-import { Service } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
-@Service()
+@Injectable({ providedIn: 'root' })
 export class Auth {
+  private readonly baseUrl = 'http://localhost:3000';
 
+  constructor(private http: HttpClient) {}
 
-    login(username: string, password: string): boolean {
-        // Implement login logic here
-        alert(`Logging in with username: ${username} and password: ${password}`);
-        return true;
-    }
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/user/login`, { email, password });
+  }
 
-    logout(): void {
-        // Implement logout logic here
-        alert('Logging out.');
-    }
+  logout(): void {
+    localStorage.removeItem('token');
+  }
 
-    isAuthenticated(): boolean {
-        // Implement authentication check logic here
-        return false;
-    }
+  isAuthenticated(): boolean {
+    return !!localStorage.getItem('token');
+  }
 
-    register(username: string, password: string): boolean {
-        // Implement registration logic here
-        return true;
-    }
-
+  register(name: string, email: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/user/register`, { name, email, password });
+  }
 }

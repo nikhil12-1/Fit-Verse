@@ -9,7 +9,7 @@
             <p class="subtitle">
                 Join FitVerse and begin your fitness journey.
             </p>
-            <form #signUpForm="ngForm" (ngSubmit)="onSubmit(singUpForm)">
+            <form #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm)">
                 <!-- Full Name -->
                 <div class="input-box">
                     <label>Full Name</label>
@@ -61,7 +61,7 @@
                     </label>
                 </div>
                 <!-- Button -->
-                <button class="register-btn">
+                <button class="register-btn" type="submit">
                     Create Account
                 </button>
             </form>

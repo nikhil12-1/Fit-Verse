@@ -1,5 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';  
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
@@ -42,7 +43,7 @@ import { UserSidebar } from './layouts/user-sidebar/user-sidebar';
     UserFooter,
     UserSidebar,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,FormsModule, HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
