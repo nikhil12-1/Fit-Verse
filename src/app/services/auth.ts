@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class Auth {
-  private readonly baseUrl = 'http://localhost:3000';
+  private readonly baseUrl = 'https://fitverse-ys9s.onrender.com/';
 
   constructor(private http: HttpClient) {}
 

@@ -43,9 +43,9 @@
             <h2>Send Message</h2>
             <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                 <input type="text" placeholder="Enter Your Name" name="name" ngModel>
-                <input type="email" placeholder="Enter Your Email" name="email" ngMode>
-                <input type="text" placeholder="Subject" name="subject" ngMode>
-                <textarea placeholder="Write your message" name="message" ngMode></textarea>
+                <input type="email" placeholder="Enter Your Email" name="email" ngModel>
+                <input type="text" placeholder="Subject" name="subject" ngModel>
+                <textarea placeholder="Write your message" name="message" ngModel></textarea>
                 <button>
                     Send Message
                 </button>

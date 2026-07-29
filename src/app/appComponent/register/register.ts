@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Auth } from '../../services/auth';
 
 @Component({
@@ -8,18 +9,10 @@ import { Auth } from '../../services/auth';
   styleUrl: './register.css',
 })
 export class Register {
-  constructor(private auth: Auth) {}
+  constructor(private http: HttpClient) {}
 
   onSubmit(signupForm: any) {
-    const { name, email, password } = signupForm.value;
-
-    this.auth.register(name, email, password).subscribe({
-      next: (response) => {
-        console.log('Register success', response);
-      },
-      error: (err) => {
-        console.error('Register failed', err);
-      },
-    });
-  }
+    this.http.post("https://fitverse-ys9s.onrender.com/user/register",signupForm.value).subscribe(res=>{
+      console.log(res);
+    })
 }
