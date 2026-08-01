@@ -65,6 +65,9 @@
 <i class="fa-solid fa-ruler-vertical"></i>
 
 <input type="number"
+[(ngModel)]="heightCm"
+name="heightCm"
+min="1"
 placeholder="Enter height">
 
 </div>
@@ -87,6 +90,9 @@ placeholder="Enter height">
 <i class="fa-solid fa-weight-hanging"></i>
 
 <input type="number"
+[(ngModel)]="weightKg"
+name="weightKg"
+min="1"
 placeholder="Enter weight">
 
 </div>
@@ -96,7 +102,7 @@ placeholder="Enter weight">
 
 
 
-<button class="calculate-btn">
+<button class="calculate-btn" type="button" (click)="calculateBMI()">
 
 Calculate BMI
 
@@ -113,12 +119,12 @@ Your BMI
 
 
 <span>
---
+{{ bmiValue ?? '--' }}
 </span>
 
 
 <p>
-Enter details to calculate
+{{ category }}
 </p>
 
 

@@ -19,4 +19,14 @@ describe('Bmi', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should calculate BMI for valid height and weight', () => {
+    component.heightCm = 170;
+    component.weightKg = 65;
+
+    component.calculateBMI();
+
+    expect(component.bmiValue).toBe(22.5);
+    expect(component.category).toBe('Normal');
+  });
 });
