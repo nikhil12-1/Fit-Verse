@@ -12,7 +12,8 @@ export class Register {
   constructor(private http: HttpClient) {}
 
   onSubmit(signupForm: any) {
-    this.http.post("https://fitverse-ys9s.onrender.com/user/register",signupForm.value).subscribe(res=>{
-      console.log(res);
-    })
+    this.http.post("http://localhost:3000/user/register",signupForm.value).subscribe(res=>{
+      console.log(res);}
+    )
+  }
 }

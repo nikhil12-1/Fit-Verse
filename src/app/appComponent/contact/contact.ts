@@ -11,7 +11,7 @@ export class Contact {
 
   constructor (private http : HttpClient) {}
   onSubmit(contactForm:any){
-    this.http.post("https://fitverse-ys9s.onrender.com/",contactForm.value).subscribe(res=>{
+    this.http.post("http://localhost:3000/contact",contactForm.value).subscribe(res=>{
       console.log(res);
     })
 }
