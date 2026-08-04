@@ -41,13 +41,21 @@
         <!-- Contact Form -->
         <div class="contact-box">
             <h2>Send Message</h2>
+            <div class="form-status" *ngIf="statusMessage" [ngClass]="{ 'success': statusType === 'success', 'error': statusType === 'error' }">
+                <span class="status-icon">{{ statusType === 'success' ? '✓' : '✕' }}</span>
+                <span>{{ statusMessage }}</span>
+            </div>
+            <div class="loader" *ngIf="isLoading">
+                <span class="spinner"></span>
+                <span>Sending...</span>
+            </div>
             <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                 <input type="text" placeholder="Enter Your Name" name="name" ngModel>
                 <input type="email" placeholder="Enter Your Email" name="email" ngModel>
                 <input type="text" placeholder="Subject" name="subject" ngModel>
                 <textarea placeholder="Write your message" name="message" ngModel></textarea>
-                <button>
-                    Send Message
+                <button type="submit" [disabled]="isLoading">
+                    {{ isLoading ? 'Sending...' : 'Send Message' }}
                 </button>
             </form>
         </div>

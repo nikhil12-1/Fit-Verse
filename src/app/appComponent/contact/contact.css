@@ -225,6 +225,65 @@ body{
 
 }
 
+.contact-box button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.form-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-status.success {
+    background: #e8f7ed;
+    color: #1f7a3f;
+    border: 1px solid #b7e4c7;
+}
+
+.form-status.error {
+    background: #fdecea;
+    color: #c0392b;
+    border: 1px solid #f5b7b1;
+}
+
+.status-icon {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 14px;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ddd;
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 
 
